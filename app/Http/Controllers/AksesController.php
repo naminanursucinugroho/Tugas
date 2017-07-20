@@ -21,7 +21,8 @@ class AksesController extends Controller
     public function index()
     {
         $member = User::all();
-        return view('indonesia.backend.akses.index')->with(compact('member'));
+            return view('indonesia.backend.akses.index')->with(compact('member'));
+        
     }
 
     /**

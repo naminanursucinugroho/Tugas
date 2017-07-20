@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class ArtikelController extends Controller
 {
     /**
@@ -23,7 +24,7 @@ class ArtikelController extends Controller
      */
     public function create()
     {
-        //
+        return view('indonesia.backend.artikel.create');
     }
 
     /**
@@ -56,7 +57,8 @@ class ArtikelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $artikel = Artikel::find($id);
+        return view('artikel.edit')->with(compact('artikel'));
     }
 
     /**

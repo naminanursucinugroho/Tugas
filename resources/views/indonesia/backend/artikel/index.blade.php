@@ -3,7 +3,7 @@
     <div class="jumbotron top-space">
         <div class="container">
             <div align="right">
-                <br><br><a href="" class="btn btn-primary">Tambah Artikel Baru</a><br>
+                <br><br><a href="{{ url('/admin/artikel/create') }}" class="btn btn-primary">Tambah Artikel Baru</a><br>
             </div><br>
             
             <div class="row">
