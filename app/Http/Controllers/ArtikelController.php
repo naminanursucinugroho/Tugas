@@ -35,7 +35,26 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'judul'=>'required|unique:artikel,judul',
+            'kategori'=>'required|exists:kategori_artikel,id',
+            'konten'=>'required',
+            'cover'=>'image|max:2048']);
+        $book Artikel::create($request->except('cover'));
+        if($request->hash_file('cover'))
+        {
+            $uploaded_cover=$request->file('cover');
+            $extension=$uploaded_cover->getClientOriginalExtension();
+            $filename=md5(time()).'.'.$extension;
+            $destinationPath->public_path().DIRECTORY_SEPARATOR. 'img';
+            $uploaded_cover->move($destinationPath, $filename);
+            $book->cover=$filename;
+            $book->save();
+        }
+        session::flash("flash_notification", [
+            "level"=>"success",
+            "message"=>"berhasil menyimpan $book->title"]);
+        return redirect()->route('artikel.index')
     }
 
     /**

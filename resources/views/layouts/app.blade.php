@@ -232,8 +232,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('table/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('table/js/dataTables.bootstrap.min.js') }}"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<!--     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
     <script src="{{ asset('assets/js/headroom.min.js') }}"></script>
     <script src="{{ asset('assets/js/jQuery.headroom.min.js') }}"></script>
     <script src="{{ asset('assets/js/template.js') }}"></script>
